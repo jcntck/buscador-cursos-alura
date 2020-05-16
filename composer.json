@@ -1,0 +1,12 @@
+{
+    "name": "jcntck/buscador-cursos-alura",
+    "description": "Pacote desenvolvido no curso de composer do site Alura.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Joao Cshunderlick Neto",
+            "email": "joaocshunderlick26@gmail.com"
+        }
+    ],
+    "require": {}
+}
