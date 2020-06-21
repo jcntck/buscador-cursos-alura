@@ -20,5 +20,10 @@
     "files": [
       "src/Helpers.php"
     ]
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.2",
+    "squizlabs/php_codesniffer": "*",
+    "phan/phan": "^3.0"
   }
 }
