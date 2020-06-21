@@ -1,29 +1,46 @@
 {
-  "name": "jcntck/buscador-cursos-alura",
-  "description": "Pacote desenvolvido no curso de composer do site Alura.",
-  "type": "library",
-  "authors": [
-    {
-      "name": "Joao Cshunderlick Neto",
-      "email": "joaocshunderlick26@gmail.com"
-    }
-  ],
-  "require": {
-    "guzzlehttp/guzzle": "^6.5",
-    "symfony/dom-crawler": "^5.0",
-    "symfony/css-selector": "^5.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Alura\\BuscadorDeCursos\\": "src/"
+    "name": "jcntck/buscador-cursos-alura",
+    "description": "Pacote desenvolvido no curso de composer do site Alura.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Joao Cshunderlick Neto",
+            "email": "joaocshunderlick26@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "symfony/dom-crawler": "^5.0",
+        "symfony/css-selector": "^5.0"
     },
-    "files": [
-      "src/Helpers.php"
-    ]
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^9.2",
-    "squizlabs/php_codesniffer": "*",
-    "phan/phan": "^3.0"
-  }
+    "autoload": {
+        "psr-4": {
+            "Alura\\BuscadorDeCursos\\": "src/"
+        },
+        "files": [
+            "src/Helpers.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.2",
+        "squizlabs/php_codesniffer": "*",
+        "phan/phan": "^3.0"
+    },
+    "scripts": {
+        "tests": "phpunit --colors tests\\TestBuscadorDeCursos.php",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "ls": "dir",
+        "check": [
+            "@phan",
+            "@cs",
+            "@tests"
+        ],
+        "post-update-cmd": [
+            "@tests"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código. PHAN, PHPCS e PHPUnit"
+    }
 }
