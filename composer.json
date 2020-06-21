@@ -42,5 +42,8 @@
     },
     "scripts-descriptions": {
         "check": "Roda as verificações do código. PHAN, PHPCS e PHPUnit"
-    }
+    },
+    "bin": [
+        "buscar-cursos.php"
+    ]
 }
